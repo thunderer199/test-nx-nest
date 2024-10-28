@@ -1,11 +1,17 @@
 import { Body, ConflictException, Controller, Get, Head, Header, HttpCode, Post, Query } from '@nestjs/common';
+import { User } from '@prototype/types';
 
-import { AppService } from './app.service';
 import { HttpStatusCode } from 'axios';
+import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
+
+  @Get()
+  foo(data: User) {
+    return 'Hello World! ' + data.name;
+  }
 
   @Get()
   @Header('x-custom-header', 'uryybjbeyq')
