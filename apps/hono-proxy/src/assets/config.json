@@ -1,0 +1,10 @@
+{
+  "services": {
+    "service1": {
+      "url": "http://localhost:4001"
+    },
+    "service2": {
+      "url": "http://localhost:4002"
+    }
+  }
+}
